@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La noche en que todo se detuvo - Historia interactiva sobre el valor del tiempo compartido">
+    <title>La noche en que todo se detuvo | Historia Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabecera principal del sitio -->
+    <header class="site-header">
+        <h1>La noche en que todo se detuvo</h1>
+        <p class="subtitle">Una historia sobre el valor del tiempo compartido</p>
+    </header>
+
+    <main>
+        <!-- Portada / Sección de bienvenida -->
+        <section id="portada" class="section section-portada" aria-labelledby="titulo-portada">
+            <h2 id="titulo-portada" class="visually-hidden">Portada de la historia</h2>
+            <div class="portada-imagen">
+                <img src="imagenes historia/photo-1672214013976-301824ba39dc.avif" alt="Atmósfera nocturna que evoca el momento en que el tiempo se detuvo">
+            </div>
+            <div class="portada-content">
+                <p class="portada-texto">¿Listo para sumergirte en una noche que cambió todo?</p>
+                <button type="button" id="btn-iniciar" class="btn btn-primario" aria-describedby="desc-iniciar">
+                    Iniciar historia
+                </button>
+                <p id="desc-iniciar" class="visually-hidden">Haz clic para comenzar la lectura de la historia</p>
+            </div>
+        </section>
+
+        <!-- Contenido narrativo (visible después de iniciar) -->
+        <div id="contenido-historia" class="contenido-historia" tabindex="-1" hidden>
+            
+            <!-- Introducción -->
+            <section id="introduccion" class="section section-narrativa" aria-labelledby="titulo-intro">
+                <h2 id="titulo-intro">Introducción</h2>
+                <div class="card">
+                    <p>Era una noche normal. Estaba en mi cuarto, con el celular en la mano, sin nada especial pasando… hasta que de repente, todo se quedó en silencio.</p>
+                </div>
+            </section>
+
+            <!-- El momento extraño -->
+            <section id="momento-extrano" class="section section-narrativa" aria-labelledby="titulo-momento">
+                <h2 id="titulo-momento">El momento extraño</h2>
+                <figure class="imagen-narrativa">
+                    <img src="imagenes historia/A-Man-Strolling-on-a-Foggy,-Deserted-Road_ctKkw.png" alt="Camino solitario y neblinoso donde el tiempo parece haberse detenido">
+                </figure>
+                <div class="card">
+                    <p>De un segundo a otro, el ventilador dejó de sonar, los carros desaparecieron, y el tiempo simplemente se detuvo.</p>
+                    <p>Miré por la ventana y todo estaba congelado: personas caminando sin moverse, hojas suspendidas en el aire, incluso una gota de agua detenida como si fuera una foto.</p>
+                </div>
+            </section>
+
+            <!-- El descubrimiento -->
+            <section id="descubrimiento" class="section section-narrativa" aria-labelledby="titulo-descubrimiento">
+                <h2 id="titulo-descubrimiento">El descubrimiento</h2>
+                <div class="card">
+                    <p>Salí de mi casa con miedo, pero también con curiosidad. Caminé por la calle y me di cuenta de algo aún más raro: yo era el único que podía moverse.</p>
+                    <p>Era como si el mundo entero se hubiera pausado solo para mí.</p>
+                </div>
+            </section>
+
+            <!-- La decisión -->
+            <section id="decision" class="section section-narrativa" aria-labelledby="titulo-decision">
+                <h2 id="titulo-decision">La decisión</h2>
+                <div class="card">
+                    <p>Por un momento pensé en hacer lo que quisiera: correr, explorar, tocar todo sin que nadie lo notara. Pero mientras más caminaba, más extraño se sentía. El silencio era demasiado perfecto, demasiado vacío.</p>
+                </div>
+            </section>
+
+            <!-- El final -->
+            <section id="final" class="section section-narrativa" aria-labelledby="titulo-final">
+                <h2 id="titulo-final">El final</h2>
+                <div class="card">
+                    <p>Cerré los ojos por un segundo y, cuando los abrí, todo volvió a la normalidad. El ruido, las personas y el viento estaban otra vez en movimiento. Nadie parecía haber notado nada.</p>
+                </div>
+            </section>
+
+            <!-- Zona interactiva con botones -->
+            <section id="zona-interactiva" class="section section-interactiva" aria-labelledby="titulo-interactiva">
+                <h2 id="titulo-interactiva" class="visually-hidden">Controles interactivos</h2>
+                <div class="card card-interactiva">
+                    <p class="interactiva-leyenda">Experimenta con el tiempo de la historia:</p>
+                    <div class="botones-grupo" role="group" aria-label="Controles de la historia">
+                        <button type="button" id="btn-detener" class="btn btn-secundario" aria-pressed="false">
+                            Detener el tiempo
+                        </button>
+                        <button type="button" id="btn-normalidad" class="btn btn-secundario" aria-disabled="true">
+                            Volver a la normalidad
+                        </button>
+                        <button type="button" id="btn-moraleja" class="btn btn-primario">
+                            Mostrar moraleja
+                        </button>
+                    </div>
+                    <p id="mensaje-tiempo" class="mensaje-tiempo" aria-live="polite" hidden></p>
+                </div>
+            </section>
+
+            <!-- Moraleja (oculta al inicio) -->
+            <section id="moraleja" class="section section-moraleja" aria-labelledby="titulo-moraleja" hidden>
+                <h2 id="titulo-moraleja">Reflexión final</h2>
+                <div class="card card-moraleja">
+                    <blockquote>
+                        <p>Desde ese día entendí algo: a veces, lo más valioso no es tener el control, sino compartir el tiempo con los demás.</p>
+                    </blockquote>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <p class="footer-titulo">La noche en que todo se detuvo</p>
+        <p class="footer-texto">Proyecto académico — Ingeniería Web — Estructura HTML5, estilos CSS, JavaScript y manipulación del DOM</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
